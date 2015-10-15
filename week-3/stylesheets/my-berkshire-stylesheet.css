@@ -1,0 +1,168 @@
+html {
+  color: #000080;
+  background-color: #fff;
+  font-family: "Times New Roman";
+}
+
+body {
+  padding: 0 1%;
+  margin:0;
+}
+
+header {
+  padding: 1em 0;
+  background: linear-gradient(to right, darkturquoise, aliceblue)
+}
+
+section {
+  clear:both;
+  overflow:auto;
+}
+
+li {
+  padding-bottom:1em;
+  font-family: "Palatino Linotype";
+}
+
+p {
+  padding:0;
+  margin:0;
+}
+
+.big-letters {
+  font-size: 125%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sm-text {
+  font-size: 75%;
+}
+
+h1, h3, h4 {
+  margin: 0.15em;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+a {
+  color: #800080;
+}
+
+a:visited {
+  color:#ff0000;
+}
+
+.lf-float {
+  float:left;
+  width: 50%;
+}
+
+.rt-float {
+  float:right;
+  width:50%;
+}
+
+.container {
+  clear:both;
+}
+
+header h1 {
+  font-variant: small-caps;
+}
+
+.list-pad-left {
+  padding-left: 4em;
+  padding-right:1em;
+}
+
+.list-pad-right {
+  padding-left: 1em;
+  padding-right:4em;
+}
+
+.pad-section {
+  padding: 1.2em 0;
+}
+
+.border-bottom {
+  border-bottom: 2px inset blue;
+}
+
+footer h6 {
+  margin-bottom:0.5em;
+}
+
+#cover-bkg {
+  overflow: auto;
+  background-image: url('../../week-2/berkshire/imgs/buff.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#cover-bkg li {
+  color:white;
+}
+
+#cover-bkg a {
+  color:white;
+}
+
+#cover-bkg li a {
+  background-color: rgba(0, 206, 209, 0.2);
+}
+
+#cover-bkg li a:hover {
+    background-color: rgba(0, 206, 209, 0.5);
+}
+
+.head-container {
+  margin: 0 20%;
+}
+
+#header-text {
+  display:inline-block;
+  border: 2px solid darkslateblue;
+  border-radius: 15px 15px 15px;
+  background-color: aliceblue;
+  padding:0.5em;
+  margin-left:1em;
+  box-shadow: 5px 5px 8px #333;
+}
+
+.sm-img {
+  height:8.3em;
+  transform: scaleX(-1);
+  display:inline;
+  border-radius: 15px 15px 15px;
+  vertical-align: bottom;
+  border: 2px solid darkslateblue;
+  box-shadow: 5px 5px 8px #333;
+}
+
+/*
+
+The first trick to creating a link to a stylesheet is be aware of the file path. If using a separate directory for stylesheets, keep that in mind if you link to background-image assets, etc. It's not the same path as the html file, for example. Also, it's easy to get overwhelmed by the flow of various stylesheets in a page. Pay attention to the order that files are loaded and the order of precedence for the CSS rules. The last file loaded takes charge!
+
+In my experience, using div's and container's is key to positioning elements on the page. Though that is not always self-evident, partly thanks to the clearfix problem. It took me a bit of time to get the main lists displayed as I wanted, with the padding on the outside. With my pair, we used his files which included a table for that section. I'm totally befuddled by tables, and styling them seems overly tedious and repetitive. I'm using two div's for that section in my files, so it was slightly easier. When asked to get creative, I modified the header to include a small profile img and a text box alongside it. It was frustrating to see the vertical alignment was off with the two, so I ultimately had to create a rule (vertical-align: bottom) for the img. Definitely makes me feel I have something wrong.
+
+I used basic styles like color, padding, margin, font-size, background-color, and text-align. Then I got fancy with fixed background images, and border-radius.
+
+I had to make a bunch of edits in the HTML, to accommodate the style of incorporating various floating div's and containers to hold them. I created several new classes, some in the vein of Msr. Marsh who explained the one rule per class method. I also used ID's because I've not been disabused of their value. In my experience, rules for ID are useful when defining sections of a page, and not text or graphic elements. Obviously these will not be reused on a page. There's only one header, e.g.
+
+I was a bit surprised at the amount of hard-coded values in the text elements. Some of those I'm not familiar with. <font size= ...> as opposed to <style="font-size:14px">. And the table seems to me enormously inefficient. There is also a <center> tag at top which is a total mystery to me. I've never seen that. In terms of best practices, the original has no html5 semantic tags. Mine does, but they could very well be used incorrectly. Mine provides an easier route to styling the page for sure. Also it provides for future changes to incorporate responsive design elements. The original site would have to be rebuilt entirely.
+
+*/
