@@ -1,5 +1,5 @@
 ![colors](imgs/colors.png)
-![columns](imgs/columns.png)
+![columns](imgs/column.png)
 ![row](imgs/row.png)
 ![neat little row](imgs/tenLittleIndians.png)
 ![squares](imgs/square.png)
