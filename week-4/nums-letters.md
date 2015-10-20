@@ -35,7 +35,7 @@ https://github.com/hazelmaeby/phase-0/blob/master/week-4/basic-math.rb
 
 #How does Ruby handle addition, subtraction, multiplication, and division of numbers?
 
-Ruby handles math operations much like a calculator. The challenge is getting the result to do what you want. Most likely you set a variable to store the value of the operation, so the syntax is reversed to traditional math from grade school. 'variable = 4 + 5' rather than '4 + 5 = x'.
+Ruby handles math operations much like a calculator. The challenge is getting the result to do what you want. Most likely you set a variable to store the value of the operation, so the syntax is reversed to traditional math from grade school. `variable = 4 + 5` rather than `4 + 5 = x`.
 
 #What is the difference between integers and floats?
 
@@ -51,7 +51,7 @@ Strings are lines of text. Maybe a name, an address, or a message to a user. We 
 
 #What are local variables? Why and when would you use them?
 
-Local variables are placeholders for some form of data, a string or number, etc. Most data in programming languages are stored in variables. I can store my age (39) in a variable 'age'. And tell the computer to figure out when I was born, with a mathematical operation. Or I can store my name (Brian) in a variable 'first_name' and construct a message '"Hello" + first_name' which will display as "Hello Brian".
+Local variables are placeholders for some form of data, a string or number, etc. Most data in programming languages are stored in variables. I can store my age (39) in a variable `age`. And tell the computer to figure out when I was born, with a mathematical operation. Or I can store my name (Brian) in a variable `first_name` and construct a message `"Hello " + first_name` which will display as "Hello Brian".
 
 #How was this challenge? Did you get a good review of some of the basics?
 
