@@ -20,3 +20,39 @@ minutes_in_a_decade = 60 * 24 * 365.25 * 10
 
 puts minutes_in_a_decade
 ```
+
+#Individual Lessons
+
+defining variables
+https://github.com/hazelmaeby/phase-0/blob/master/week-4/defining-variables.rb
+
+simple string
+https://github.com/hazelmaeby/phase-0/blob/master/week-4/simple_string.rb
+
+basic math
+https://github.com/hazelmaeby/phase-0/blob/master/week-4/basic-math.rb
+
+
+#How does Ruby handle addition, subtraction, multiplication, and division of numbers?
+
+Ruby handles math operations much like a calculator. The challenge is getting the result to do what you want. Most likely you set a variable to store the value of the operation, so the syntax is reversed to traditional math from grade school. `variable = 4 + 5` rather than `4 + 5 = x`.
+
+#What is the difference between integers and floats?
+
+Floats have numbers to the right of the decimal. Integers are whole numbers. We can switch between the two, if we ask Ruby to do so. 14 can become 14.0, and vice versa. Otherwise, it will stick with whatever format we use first.
+
+#What is the difference between integer and float division?
+
+As mentioned above, ruby will give you a whole number when dividing two integers, whether or not the actual quotient is a whole number. It effectively rounds the number. And it will give you a float when dividing two floats. The default behavior is to provide a result that matches the inputs, float result for floats, and integer result for integers.
+
+#What are strings? Why and when would you use them?
+
+Strings are lines of text. Maybe a name, an address, or a message to a user. We use them to store information, like the personal data of a web site user.
+
+#What are local variables? Why and when would you use them?
+
+Local variables are placeholders for some form of data, a string or number, etc. Most data in programming languages are stored in variables. I can store my age (39) in a variable `age`. And tell the computer to figure out when I was born, with a mathematical operation. Or I can store my name (Brian) in a variable `first_name` and construct a message `"Hello " + first_name` which will display as "Hello Brian".
+
+#How was this challenge? Did you get a good review of some of the basics?
+
+It was easy to write the ruby code. Using variables in this way is a bit of review for me. But it was tricky at first to understand the rspec component and use it properly.
