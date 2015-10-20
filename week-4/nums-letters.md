@@ -16,7 +16,7 @@ Calculate minutes in a decade
 60 minutes in an hour // 24 hours in a day // 365.25 days in a year // 10 years in a decade
 =end
 
-hours_in_a_decade = 60 * 24 * 365.25 * 10
+minutes_in_a_decade = 60 * 24 * 365.25 * 10
 
-puts hours_in_a_decade
+puts minutes_in_a_decade
 ```
