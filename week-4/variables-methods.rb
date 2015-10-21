@@ -6,15 +6,28 @@ if reply1 == "yes"
   first_name = gets.chomp
   puts "Do you have a last name, " + first_name + "?"
   last_name = gets.chomp
-  puts "Do you prefer " + first_name + ", or Mr. " + last_name + "?"
+  puts "Anything in the middle there?"
+  middle_name = gets.chomp
+  puts "Do you prefer " + first_name[0] + middle_name[0] + ", or Mr. " + last_name + "?"
   used_name = gets.chomp
   puts "Ok, then. " + used_name + " it is."
 elsif reply1 == "no"
   puts "Maybe another time."
+else
+  puts "Maybe it's a bad time."
 end
 
-#
 =begin
+
+links to exercise files
+
+https://github.com/hazelmaeby/phase-0/tree/master/week-4/define-method/my_solution.rb
+
+https://github.com/hazelmaeby/phase-0/tree/master/week-4/variables-methods-number-game.rb
+
+https://github.com/hazelmaeby/phase-0/tree/master/week-4/address/my_solution.rb
+
+https://github.com/hazelmaeby/phase-0/tree/master/week-4/math/my_solution.rb
 
 How do you define a local variable?
 
@@ -45,4 +58,4 @@ What was confusing about this material? What made sense?
 
 The style for variables and methods makes sense to me. It looks similar to Javascript, with which I have more experience. I don't understand methods as well, however. I did some fooling, and it seems that a method cannot use a variable unless it's passed in as an argument. In JS, a function can identify and utilize public variables with no problem. It seems the syntax is much more precise and unforgiving in Ruby to set up the methods properly.
 
-end=
+=end

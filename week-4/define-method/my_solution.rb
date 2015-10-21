@@ -6,7 +6,7 @@ def do_something(time, date, place)
   puts "Is " + place + "a happy place?"
 end
 
-# I worked on this challenge [by myself, with: ].
+# I worked on this challenge [by myself].
 
 
 # Your Solution Below
