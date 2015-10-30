@@ -10,7 +10,7 @@ def  my_array_splitting(array)
   string_array = []
   array.each do |x|
     if x.is_a?(Integer)
-      int_array << x 
+      int_array << x
     else
       string_array << x
     end
