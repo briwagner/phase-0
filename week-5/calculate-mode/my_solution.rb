@@ -39,9 +39,40 @@ def mode(array)
   return new_array
 end
 
+
 # 3. Refactored Solution
 
+def new_mode(array)
+  hash = Hash.new
+  array.each {|x| hash[x] = array.count(x)}
+  return hash.key(hash.values.max)
+end
 
-
+p new_mode([1,1,3,3,4,5,5,5,3,3])
 
 # 4. Reflection
+=begin
+#Which data structure did you and your pair decide to implement and why?
+
+We used a hash because it seemed to be the only way to link the integers with the count of the
+ integers.
+
+#Were you more successful breaking this problem down into implementable pseudocode than
+the last with a pair?
+
+I think we had the steps right. But we innocently put one step into pseudocode that we
+couldn't do in one step of real code. So we wrote a bunch of lines to get around that -->
+scanning the values for the highest count. Coming back after a couple days break, I can
+see how we made the process rather convoluted.
+
+#What issues/successes did you run into when translating your pseudocode to code?
+
+As stated above, we thought searching the values for one specific value would be easier
+than we anticipated.
+
+#What methods did you use to iterate through the content? Did you find any good ones when you were refactoring? Were they difficult to implement?
+
+We used /select/ because it seemed a good way to filter. We struggled with the right format
+at first, but figured it out. I was super happy when we got it working. After thinking about it, it doesn't seem to have been the most efficient way to get where we wanted.
+
+=end
