@@ -15,17 +15,19 @@ my_family_pets_ages = {"Evi" => 6, "Ditto" => 3, "Hoobie" => 3, "George" => 12, 
 #End
 #Print has_key_letter array
 
-# Person 1's solution --> Karla
+# Person 1's solution: Karla
 def my_array_finding_method(element_array, letter)
   has_key_letter = Array.new
    element_array.each do |element|
-    # element = element.to_s
-    if element.to_s.include?(letter)
+    element = element.to_s
+    if element.include?(letter)
       has_key_letter.push(element)
     end
    end
    p has_key_letter
 end
+
+my_array_finding_method(i_want_pets,"t")
 
 #Pseudocode
 #Create a new empty array called pet_is_age
@@ -47,7 +49,7 @@ def my_hash_finding_method(hash_collection, age)
    p pet_is_age
 end
 
-# my_hash_finding_method(my_family_pets_ages, 3)
+my_hash_finding_method(my_family_pets_ages, 3)
 
 =begin
 # Release 1: Identify and describe the Ruby method you implemented.
