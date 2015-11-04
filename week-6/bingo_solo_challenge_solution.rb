@@ -74,14 +74,23 @@ class Bingo
 
   def initialize
     @bingo_board = new_board
+    # @letter_key = ["B" => 1..15, "I" => 16..30, "N" => 31..45, "G" => 46..60, "O" => 61..75]
+    @called_numbers = []
     @match = false
   end
 
-  def new_board
-    board = []
-    5.times do
-      board << [rand(1..15), rand(16..30), rand(31..45), rand(46..60), rand(61..75)]
+  def generate_randoms(min, max)
+    row = []
+    loop do
+      numb = rand(min..max)
+      row << numb unless row.include?(numb)
+      break if row.length == 5
     end
+    return row
+  end
+
+  def new_board
+    board = generate_randoms(1,15).zip( generate_randoms(16,30), generate_randoms(31,45), generate_randoms(46,60), generate_randoms(61,75) )
     board[2][2] = 'X'
     return board
   end
@@ -92,6 +101,49 @@ class Bingo
 
   def show_column(col)
     @bingo_board.each {|x| p x[col]}
+  end
+
+  def new_random
+    x = rand(1..75)
+    until !@called_numbers.include?(x)
+      x = rand(1..75)
+    end
+    return x
+  end
+
+  def next_number
+    @match = false
+    new_number = new_random
+    @called_numbers << new_number
+    # p "New number is " + new_number.to_s
+    new_letter_pos = case new_number
+      when 1..15 then 0
+      when 16..30 then 1
+      when 31..45 then 2
+      when 46..60 then 3
+      when 61..75 then 4
+    end
+    new_letter = case new_number
+      when 1..15 then "B"
+      when 16..30 then "I"
+      when 31..45 then "N"
+      when 46..60 then "G"
+      when 61..75 then "O"
+    end
+    p "The next letter is " + new_letter + " " + new_number.to_s
+    sleep 1.2
+    find_number(new_number, new_letter_pos)
+    show_board
+  end
+
+  def find_number(number, column)
+   @bingo_board.each do |sub|
+     if number == sub[column]
+      @match = true
+      sub[column] = "X"
+     end
+    end
+    @match ? puts("Found it") : puts("Can't find it")
   end
 
 end
@@ -148,5 +200,10 @@ I guess I created two instance variables. Obviously the letters BINGO are the sa
 those in an array as a reference. Then I created a @match variable to help in processing
 when a match was found. I guess those are true to the game, any game, all games. So it makes
 sense that they operate on an instance level.
+
+I spent an enormous amount of time in refactoring. Foolishly, I wanted numbers to avoid being called
+twice, so I created a new instance variable to hold the called numbers. One cool thing I found
+to generate the official bingo board was zip. I created five arrays with the number ranges, and
+*zip*. It shuffles all five together in order, one by one. Awesome.
 
 =end
