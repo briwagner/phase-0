@@ -1,14 +1,22 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge [w/ Kris B ].
+# I spent [1] hours on this challenge.
 
 # Pseudocode
 
-# Input:
-# Output:
-# Steps:
+# Input: a 16 digit number
+  # Output: true or false.
+  # Steps:
+  # 1. RAISE ERROR if not 16 digits
+  # 2. INITIALIZE instance variable with the 16 digit number
+  # 3. Separate each digit into an array
+  # 4. Every even index in the array is doubled
+  # 5. Separate each index in the array into its digits
+  # 6. Add all digits, and set them equal to new variable
+  # 7. Check to see if variable is divisible by 10
+  # 8. RETURN true or false based on outcome
 
 
 # Initial Solution
