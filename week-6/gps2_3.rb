@@ -40,3 +40,28 @@ p serving_size_calc("cookie", 10)
 # p serving_size_calc("THIS IS AN ERROR", 5)
 
 #  Reflection
+=begin
+
+We definitely learned what hard-to-read code looks like, and how much time
+is wasted by trying to decipher it. I hope at the same time we're learning
+how to write readable code. Those are probably two different challenges.
+I'm a big fan of thinking hard about expressive variable names, etc. That
+helps me understand, so I'm not tracking through code trying to figure out
+why that is called XX and what it does.
+
+We didn't use any novel methods here. I got a primer again in ! values.
+Sometimes the easiest way to set a conditional is NOT something. And my
+pair geniusly realized that we needed to turn an integer into float,
+before we could perform a .ceil operation. Even though we didn't use the
+line, she helped me save what would have been much more time trying to
+decode that faulty syntax.
+
+With hashes, the syntax is different than arrays. Sometimes it's a trick
+to remember square brackets, not parentheses, and vice versa. Also, there's
+different syntax for :symbols as opposed to key "strings".
+
+I'm getting more comfortable with the hash syntax. Parentheses and
+rockets, etc. The concept of storing data in collections and sorting it
+and accessing it is pretty transparent to me now.
+
+=end
