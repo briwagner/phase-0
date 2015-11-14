@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+  <script src="game.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div id="main">
+      <p id="score">Score: <span id="score-number">0</span></p>
+      <div id="oldRain">
+      </div>
+    </div>
+    <div id="garden">
+      <img id="flower1" class="flower-pic" src="flower.png" alt="flower">
+      <img id="flower2" class="flower-pic" src="flower.png" alt="flower">
+      <img id="flower3" class="flower-pic" src="flower.png" alt="flower">
+      <img id="flower4" class="flower-pic" src="flower.png" alt="flower">
+    </div>
+    <!-- bottom button bar -->
+    <div class="sidebar" id="sidebar">
+      <!-- <button class="btn btn-lg" onclick="nextDrop()">More drops!</button> -->
+      <button class="btn btn-lg" onclick="rainTop(25)">Make it rain down!</button>
+      <button class="btn btn-lg" onclick="dropColor()">Rain a different color</button>
+      <button class="btn btn-lg" onclick="moveRight()">Move right</button>
+      <!-- <button class="btn btn-lg" onclick="biggerRain()">Size</button> -->
+    </div>
+
+  </div>
+
+</body>
+</html>

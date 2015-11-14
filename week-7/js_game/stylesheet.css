@@ -1,0 +1,53 @@
+#main {
+  height:400px;
+  width:1000px;
+  background-color: deepskyblue;
+}
+
+#rain {
+  width:50px;
+  height:50px;
+  background-color: white;
+  position:relative;
+  border-radius: 50%;
+  z-index: 50;
+}
+
+#garden {
+  background: url('grass.png') deepskyblue;
+  height:200px;
+  width:1000px;
+}
+
+#flower1 {
+  background-color:yellow;
+}
+
+#flower2 {
+  background-color:black;
+}
+
+#flower3 {
+  background-color:red;
+}
+
+#flower4 {
+  background-color:white;
+}
+
+.flower-pic {
+  margin-left:90px;
+  z-index: 5;
+  display:inline-block;
+}
+
+.grass {
+  position:absolute;
+  top: 400px;
+}
+
+#score {
+  float:left;
+  margin-left:40px;
+  font-size: 1.8em;
+}
