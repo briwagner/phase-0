@@ -120,3 +120,26 @@ STATE_DATA.each{|state, population_data|
 
 #=======================================================================
 # Reflection Section
+=begin
+
+The data file uses two different syntaxes for the object. One uses a string
+as key. The other uses symbols as key. That affects the way we access the
+values in the objects. String must use string, and symbol must use symbol.
+
+Require_relative assumes that a requested file is in the local dir, as in local
+to the file making the request. Require allows you to specify the absolute path
+for the file. Otherwise it assumes the local diretory as the kernel running Ruby.
+
+We have a few methods for iterating through a hash. We can run .each and just
+run through it from front to back. Or we can run each_with_index and that gives
+us control over the index as well. As with all Enumerables, we can do this
+  non-destructively or destructively, depending on the precise methods we use.
+
+Originally, the virus_effects method was overly verbose about the properties. Since
+those are public variables, we don't need to specify them at all here.
+
+It's nice to review the various ways to access hashes. Clearly these are among the
+most complicated data structures we've seen yet, so we should get the fundamentals down
+now.
+
+=end
