@@ -2,7 +2,7 @@
 
 
 # I worked on this challenge [by myself].
-# This challenge took me [#] hours.
+# This challenge took me [4] hours.
 
 
 # Pseudocode
@@ -79,6 +79,7 @@ def chop_array(array, name)
 end
 =end
 
+# search within  # array - WORKS
 def verify(range, target)
   if target > range[range.length-1] || target < range[0]
     p 'no match'
@@ -107,28 +108,9 @@ def range_search(range, target)
   end
 end
 
-range_search(1..50, 51)
+# range_search(1..50, 51)
 
-def binary_search(array, name)
-  begin_search = 0
-  end_search = array.length
-  if array[end_search/2].first_name > name
-    begin_search = end_search/2
-  else
-    end_search = end_search/2
-  end
-  p begin_search, end_search
-end
-
-def halve_array(array, name)
-  if array[end_search/2].first_name > name
-    begin_search = end_search/2
-  else
-    end_search = end_search/2
-  end
-end
-
-# binary_search(students, "Alex")
+# end search within array
 
 Alex = Student.new("Alex", [100,100,100,0,100])
 Dave = Student.new("Dave", [10,90,80,10,100])
@@ -145,7 +127,25 @@ students = [Alex, Chessie, Dave, Kimbra, Klobber]
 
 # Refactored Solution
 
-=begin
+def binary_search(array, name)
+  begin_search = 0
+  end_search = array.length
+  loop do
+    middle = (end_search + begin_search) / 2
+    if name == array[middle].first_name
+      p "match found at #{middle}"
+      return
+    elsif name > array[middle].first_name
+      begin_search = middle + 1
+    else
+      end_search = middle
+    end
+  end
+  p begin_search, end_search
+end
+
+binary_search(students, "Alex")
+
 # DRIVER TESTS GO BELOW THIS LINE
 # Initial Tests:
 p students[0].first_name == "Alex"
@@ -166,4 +166,17 @@ p linear_search(students, "NOT A STUDENT") == -1
 
 
 # Reflection
+=begin
+I did Object Oriented Basics, and it cracked my tail! I thought I remembered the Class stuff,
+but it took some remembering. I had to re-teach myself the attr_accessor functions and the
+scope for Ruby variables. I still find it impossibly strict, compared to JS. Also I learned
+what's the difference between linear search and binary search. Crazy. Binary assumes a sorted
+collection, so you keep chopping the collection in half to narrow down the search. No need
+to search the entire phone book if you're just looking for the D's.
+
+I'd like to find some more object oriented stuff for Ruby before on campus starts. I had done a
+bit with JS and feel comfortable with that. But the Ruby way of doing it is counter-intuitive to me.
+I think Ruby has a truer implementation of classes, etc., or a deeper way of doing it. So I need to
+get more comfortable with that. There's a lot of chapters left in our books, so I can start there.
+
 =end
