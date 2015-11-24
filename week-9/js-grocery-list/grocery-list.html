@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Grocery List</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="grocery-list.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="grocery-list.js"></script>
+
+</head>
+
+<body>
+  <div class="container col-md-8">
+    <h2>This is a grocery list</h2>
+    <h4>What should we add?</h4>
+    <form name="add">
+      <label for="addItem">Add an item</label>
+      <input type="text" class="form-control" id="addItem" placeholder="item" />
+      <input type="text" class="form-control" id="addItemQuant" placeholder="quantity" />
+      <button class="btn" type="button" onclick="addNewItem()">Add an item</button>
+    </form>
+  </div>
+
+  <div class="col-md-8">
+    <ul id="list">
+      <li id="sampleItem" class="demo">quantity - item</li>
+    </ul>
+  </div>
+
+  <div id="deleteButton" class="col-md-8">
+    <form name="delete">
+      <label for="removeItem">Remove an item</label>
+      <input type="text" class="form-control" id="removeItem" placeholder="item to remove" />
+      <button class="btn btn-danger" type="button" onclick="deleteItem()">Remove item</button>
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
