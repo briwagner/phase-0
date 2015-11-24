@@ -1,0 +1,32 @@
+#list {
+  list-style-type:none;
+  margin:2em 0;
+  padding-top: 1.8em;
+  background: url('paper.jpg') top left no-repeat;
+}
+
+#list li {
+  padding-bottom: 0.2em;
+}
+
+label {
+  display:block;
+}
+
+#addItem, #removeItem {
+  width: 40%;
+  display:inline-block;
+}
+
+#addItemQuant {
+  width:15%;
+  display:inline-block;
+}
+
+.demo {
+  font-style: italic;
+}
+
+#deleteButton {
+  display:none;
+}
