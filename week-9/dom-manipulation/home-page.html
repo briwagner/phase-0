@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manipulate the DOM</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+  <div id="release-0">
+    <p class="release-4"> Here is some text, add a class "done" to the parent div</p>
+  </div>
+
+  <div id="release-1">
+    <p>remove the #release-1 div</p>
+  </div>
+
+  <h1>Change this text to finish release 2</h1>
+
+  <div id="release-3">
+    <p class="release-4"> add CSS to this div</p>
+  </div>
+
+  <template id="hidden">
+    <div>
+      <h1> Congrats! You finished the challenge.</h1>
+      <img src="http://media.giphy.com/media/2UpzC3iPenf44/giphy.gif">
+    </div>
+  </template>
+
+<script type="text/javascript" src="home_page.js"></script>
+</body>
+</html>
+
+<!-- Add your reflection here -->
+<!-- # This challenge took me [1] hours. 
+
+JS has a lot of built-in methods to access DOM elements and set or get values.
+Unlike jquery however, it can get a bit wordy to do things. I see a lot of examples
+that employ multiple lines to accomplish things, which to me seem to be possible
+in fewer lines. I don't know if that's a function of just trying to show examples
+in a simple fashion, or the relatively limited nature of DOM manipulation with 
+plain JS. But having some exposure to jQuery, the process seems a bit more complicated.
+
+With plain JS, we need to take care whether we're scanning for elements by ID or by class. 
+In jQuery it doesn't matter ( $(".class") or $("#ID") -- the basic format is the same ). 
+But JS has different method names depending on what we want to do. We can search by ID,
+by ClassName, or even by TagName. After that, we can manipulate them as we wish.
+The one trick I had to remember is that the latter two return an array of items, or a
+nodeList. That means we have to unpack the nodeList in order to manipulate the 
+individual elements.
+
+-->
